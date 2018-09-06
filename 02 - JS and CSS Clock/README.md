@@ -3,7 +3,8 @@
 ## **Intro**
 
 用 JS 與 CSS 搭配製作一個實時的時鐘效果。
-[DEMO](https://yangjiesu.github.io/JavaScript30/)
+
+[DEMO](https://yangjiesu.github.io/JavaScript30/02 - JS and CSS Clock/index-CloudSu.html)
 
 ## **Step**
 
