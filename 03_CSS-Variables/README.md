@@ -4,7 +4,7 @@
 
 用 JS 與 CSS 搭配製作一個即時濾鏡效果。
 
-[DEMO](https://yangjiesu.github.io/JavaScript30/03-CSS-Variables/index-CloudSu.html)
+[DEMO](https://yangjiesu.github.io/JavaScript30/03_CSS-Variables/index-CloudSu.html)
 
 ## **Step**
 
