@@ -26,8 +26,8 @@
 ## **JavaScript語法&備註**
 
 ### **1. filter()**
-題目：篩選出於 1500~1599 年間出生的inventor
-解答：透過 `fifter()` 對來源做篩選，會將結果為 `true` 的資料組成陣列回傳
+* 題目：篩選出於 1500~1599 年間出生的inventor
+* 解答：透過 `fifter()` 對來源做篩選，會將結果為 `true` 的資料組成陣列回傳
 ````javascript
 const fifteenArray = inventors.filter(function(inventor) {
     return inventor.year >= 1500 && inventor.year < 1600;
