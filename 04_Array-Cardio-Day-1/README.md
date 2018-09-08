@@ -26,7 +26,7 @@
 ## **JavaScript語法&備註**
 
 ### **1. filter()**
-* 題目：篩選出於 1500~1599 年間出生的inventor
+*	題目：篩選出於 1500~1599 年間出生的inventor
 * 解答：透過 `fifter()` 對來源做篩選，會將結果為 `true` 的資料組成陣列回傳
 ````javascript
 const fifteenArray = inventors.filter(function(inventor) {
@@ -39,8 +39,8 @@ const fifteenArray = inventors.filter(inventor => (inventor.year >= 1500 & inven
 >參閱：[MDN-Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
 ### **2. map()**
-題目：將 inventors 內的 first 與 last 組合成一個陣列
-解答：透過 `map` 來將 firstName/lastNam 組合返回陣列
+* 題目：將 inventors 內的 first 與 last 組合成一個陣列
+* 解答：透過 `map` 來將 firstName/lastNam 組合返回陣列
 ````javascript
 const fullName = inventors.map(function(inventor) {
     return `${inventor.first} ${inventor.last}`;
@@ -52,8 +52,8 @@ const fullName = inventors.map(inventor => `${inventor.first} ${inventor.last}`)
 >參閱：[MDN-Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ### **3. sort()**
-題目：依據生日由大至小排序所有的 inventor
-解答：透過 `sort()` 來做排序
+* 題目：依據生日由大至小排序所有的 inventor
+* 解答：透過 `sort()` 來做排序
 ````javascript
 const ordered = inventors.sort(function(a, b) {
     // return a.year - b.year;
@@ -71,8 +71,8 @@ const ordered = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
 >參閱：[MDN-Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)  
 
 ### **4. reduce()**
-題目：加總所有inventor的在世時間  
-解答：要加總的話，用以前的寫法會寫這樣
+* 題目：加總所有inventor的在世時間  
+* 解答：要加總的話，用以前的寫法會寫這樣
 ````javascript
 let totalYears = 0;
 for (let i = 0; i < inventors.length; i++) {
@@ -103,8 +103,8 @@ const totalYears = inventors.reduce((total, inventor) => {
 >參閱：[MDN-Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
 ### **5. sort()**
-題目：依據年齡由大至小排序所有的 inventor。  
-解答：排序原理同第三題，多一段計算年齡的部分
+* 題目：依據年齡由大至小排序所有的 inventor。  
+* 解答：排序原理同第三題，多一段計算年齡的部分
 ````javascript
 const oldest = inventors.sort(function(a, b) {
     const lastInventor = a.passed - a.year;
@@ -114,8 +114,8 @@ const oldest = inventors.sort(function(a, b) {
 ````
 
 ### **6. map() + filter() & includes()**
-題目：列出 wiki 中巴黎所有包含 'de' 的路名
-解答：
+* 題目：列出 wiki 中巴黎所有包含 'de' 的路名
+* 解答：
 ````javascript
 const category = document.querySelector('.mw-category');
 const links = Array.from(category.querySelectorAll('a'));
@@ -130,8 +130,8 @@ const de = links
 >參閱：[MDN-Array.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 
 ### **7. sort() & split()**
-題目：依據 lastName 排序所有 people 的資料
-解答：
+* 題目：依據 lastName 排序所有 people 的資料
+* 解答：
 ````javascript
 const alpha = people.sort(function(lastOne, nextOne) {
     const [aLast, aFirst] = lastOne.split(', ');
@@ -159,8 +159,8 @@ const alpha = people.sort((lastOne, nextOne) => {
 >參閱：[MDN-String.prototype.split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)
 
 ### **8. reduce()**
-題目：分別計算 data 內每個種類的數量  
-解答：
+* 題目：分別計算 data 內每個種類的數量  
+* 解答：
 ````javascript
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
 
@@ -176,8 +176,8 @@ const transportation = data.reduce(function(obj, item) {
 接著做一個判斷來決定建立物件內容或著使已建立內容累加總數!
 
 ## 探索  
-題目：試著將統計 people 的所有單字拆開，並統計各單字共出現次數 
-解答：
+* 題目：試著將統計 people 的所有單字拆開，並統計各單字共出現次數 
+* 解答：
 ````javascript
 const strCnt = people.reduce(function (obj, item) {
     const itemStr = item.match(/[a-zA-Z]/g, '');
