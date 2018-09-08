@@ -112,6 +112,22 @@ const oldest = inventors.sort(function(a, b) {
 });
 ````
 
+### **6. map() + filter() & includes()**
+題目：列出 wiki 中巴黎所有包含 'de' 的路名
+解答：
+````javascript
+const category = document.querySelector('.mw-category');
+const links = Array.from(category.querySelectorAll('a'));
+const de = links
+            .map(link => link.textContent)
+            .filter(streetName => streetName.includes('de'));
+````
+先用 `querySelectorAll()` 來選取對象元件，  
+再利用 Array.from 將 nodeList 轉為 Array，  
+才能對其進行 map 操作( map 是 Array 的方法，nodeList 沒有)，  
+同時加上 `filter` + `includes` 來做文字的篩選，若存在 ’de’ 就回傳 true 加入陣列。
+>參閱：[MDN-Array.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
+
 ### **7. sort() & split()**
 題目：依據 lastName 排序所有 people 的資料
 解答：
