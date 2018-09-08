@@ -24,6 +24,7 @@
 8. 分別計算 data 內每個種類的數量
 
 ## **JavaScript語法&備註**
+
 ### **1. filter()**
 題目：篩選出於 1500~1599 年間出生的inventor
 解答：透過 `fifter()` 對來源做篩選，會將結果為 `true` 的資料組成陣列回傳
@@ -38,7 +39,7 @@ const fifteenArray = inventors.filter(inventor => (inventor.year >= 1500 & inven
 >參閱：[MDN-Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
 ### **2. map()**
-題目：將 inventors 內的 first 與 last 組合成一個陣列  
+題目：將 inventors 內的 first 與 last 組合成一個陣列
 解答：透過 `map` 來將 firstName/lastNam 組合返回陣列
 ````javascript
 const fullName = inventors.map(function(inventor) {
@@ -51,7 +52,7 @@ const fullName = inventors.map(inventor => `${inventor.first} ${inventor.last}`)
 >參閱：[MDN-Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ### **3. sort()**
-題目：依據生日由大至小排序所有的 inventor 
+題目：依據生日由大至小排序所有的 inventor
 解答：透過 `sort()` 來做排序
 ````javascript
 const ordered = inventors.sort(function(a, b) {
@@ -78,9 +79,8 @@ for (let i = 0; i < inventors.length; i++) {
     let liveYear = inventors[i].passed - inventors[i].year;
     totalYears += liveYear;
 }
-````
-如果利用 `reduce()` ：
-````javascript
+
+// 如果利用 `reduce()` ：
 const totalYears = inventors.reduce(function(total, inventor) {
     return total += (inventor.passed - inventor.year);
 }, 0);
@@ -90,6 +90,7 @@ const totalYears = inventors.reduce((total, inventor) => {
     return total + (inventor.passed - inventor.year);
 }, 0);
 ````
+
 `redice()` 的callback有四個參數：
 1. 初始值
 2. 陣列中正在處理的元素
