@@ -4,7 +4,7 @@
 
 使用 8 個範例來介紹 Array 的各種操作
 
-[DEMO](https://yangjiesu.github.io/JavaScript30/04_Array-Cardio-Day-1/index-CloudSu.html)
+[DEMO](https://syj0905.github.io/JavaScript30/04_Array-Cardio-Day-1/index-CloudSu.html)
 
 ## **Step**
 
